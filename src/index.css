@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Lato:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Minimal global base styles */
+@layer base {
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    color: #374151;
+    background-color: #f9fafb;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  /* Base dark mode overrides */
+  .dark body {
+    color: #f3f4f6;
+    background-color: #111827;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    color: #1e3a8a;
+    margin-top: 0;
+    line-height: 1.25;
+    transition: color 0.3s ease;
+  }
+  
+  .dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
+    color: #93c5fd;
+  }
+  
+  a {
+    color: #1e3a8a;
+    transition: color 0.3s ease;
+  }
+  
+  .dark a {
+    color: #60a5fa;
+  }
+  
+  a:hover {
+    color: #facc15;
+  }
+  
+  .dark a:hover {
+    color: #fde68a;
+  }
+}
